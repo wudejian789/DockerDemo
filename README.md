@@ -107,6 +107,10 @@ run.sh文件同样放在该目录下，里面所写的就是得到预测结果�
 
 >docker commit 容器ID 镜像名
 
+对应此处的提交代码就是
+
+>docker commit e3fafe095c95 registry.cn-shanghai.aliyuncs.com/data-science_by_dante/2020-dcic-zhhyjs:1.0
+
 通过以上指令即可将容器的变化提交到所选择的镜像中去，这样一来便完成了镜像的构建。
 
 ### 4.5 提交镜像
@@ -148,5 +152,7 @@ https://cr.console.aliyun.com/?spm=5176.166170.863063.btn1cr1.7c79217f5vznID&aly
 以这次的题目为例，我在构建镜像的文件夹中同样加入了tcdata文件夹，里面也创建了一个hy_round2_testA_20200225的文件夹，然后文件夹里放入了少量的几个训练集的数据，这样便能测试代码的准确性，而不至于线上提交出错浪费机会。
 
 ![image](https://github.com/wudejian789/DockerDemo/blob/master/images/fig5.png)
+
+测试完没问题后，最好删除镜像里整个tcdata文件夹，因为我不知道保留在镜像中会不会与后面的官方挂载出现冲突，删除的方式和配置镜像的环境类似，进入容器控制台**rm -rf /tcdata**然后exit出来，commit就好。
 
 ### 5.2 应该差不多了，祝大家摸奖顺利。
