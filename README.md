@@ -111,7 +111,7 @@ run.sh文件同样放在该目录下，里面所写的就是得到预测结果�
 
 >docker commit e3fafe095c95 registry.cn-shanghai.aliyuncs.com/data-science_by_dante/2020-dcic-zhhyjs:1.0
 
-通过以上指令即可将容器的变化提交到所选择的镜像中去，这样一来便完成了镜像的构建。
+通过以上指令即可将容器的变化提交到所选择的镜像中去，这样一来便完成了镜像的环境搭建。
 
 ### 4.5 提交镜像
 
